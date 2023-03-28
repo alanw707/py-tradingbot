@@ -5,12 +5,6 @@ import numpy as np
 import os
 from dotenv import load_dotenv
 
-# api_key = 'S3BgclCLmf25gxUo2XGb0HupAyh9DxlUWvOf4Ql3ON6l6diQ9LFdDWpOPN1TDzGa'
-# secret_key = 'NZzQmKwfbLoKy2BdhjvSIwBvcGWOTManqX8JaRM5NLc28x1lRUka3gzvaWYktWVf'
-
-# os.environ['BUS_API_KEY_VAR'] = 'S3BgclCLmf25gxUo2XGb0HupAyh9DxlUWvOf4Ql3ON6l6diQ9LFdDWpOPN1TDzGa'
-# os.environ['BUS_SECRET_VAR'] = 'NZzQmKwfbLoKy2BdhjvSIwBvcGWOTManqX8JaRM5NLc28x1lRUka3gzvaWYktWVf'
-
 load_dotenv()
 
 api_key = os.environ.get('BINANCE_API_KEY')
