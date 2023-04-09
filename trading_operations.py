@@ -1,13 +1,17 @@
 # trading_operations.py
 import ccxt
+from trade_orge import TradeOgre
 
-def init_exchange(api_key, secret_key):
-    exchange = ccxt.binanceus({
-        'apiKey': api_key,
-        'secret': secret_key,
-        'enableRateLimit': True,
-        'rateLimit': 1200,
-    })
+def init_exchange(api_key, secret_key, name_of_exchange="binance"):
+    if name_of_exchange == "binance":
+        exchange = ccxt.binanceus({
+            'apiKey': api_key,
+            'secret': secret_key,
+            'enableRateLimit': True,
+            'rateLimit': 1200,
+        })
+    if name_of_exchange == 'trade_orge':        
+        exchange = TradeOgre(api_key)        
     return exchange
 
 def buy_order(exchange, symbol, amount_to_buy):
