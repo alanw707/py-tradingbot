@@ -1,4 +1,5 @@
 # .gitignore
 .env
-*.db
-*.sqbpro
+trading_bot.db
+trading_bot.sqbpro
+__pycache__
